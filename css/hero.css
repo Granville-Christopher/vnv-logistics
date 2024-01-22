@@ -1,0 +1,66 @@
+#home{
+    background: linear-gradient(rgb(17, 28, 38), rgba(0, 0, 0, 0.395)), url(../img/plane/pexels-jeffry-surianto-17802157.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 80vh; */
+}
+
+#home{
+    color: aliceblue;
+}
+#home .container{
+    padding-top: 75px;
+}
+#home .container form label{
+    color: rgb(156, 213, 236);
+     
+}
+#home .container h1{
+    color: rgb(156, 213, 236);
+    text-shadow: 0px 1px 2px white;
+}
+#home .container h1 .fa-vnv{
+    font-size: 50px
+}
+#home .container form{
+    margin-top: 50px;
+}
+#home .container form button{
+    background-color: rgb(238, 162, 108);  /*Shades of orange or coral */
+    color: black;
+    border-radius: 5px;
+    border: none;
+
+}
+#home .container form button:hover{
+    box-shadow: 0px 2px 2px 1px rgb(156, 213, 236);
+    background-color: aliceblue;
+    margin-top: -10px;
+}
+#home .container .col-md-4 img{
+
+    display: none;
+}
+
+
+@media (max-width: 920px){
+    #home .container{
+        padding-top: 40px;
+    }
+
+    #home .container .col-md-4 img{
+        border-radius: 20px;
+        height: 60%;
+        margin-top: 10%;
+        display: inline-block;
+    }
+
+    #home .container h5{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    #home .container form{
+        margin-top: 30px;
+    }
+}

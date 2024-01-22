@@ -1,0 +1,253 @@
+.horizontal-line {
+    color: rgb(238, 162, 108);  /*Shades of orange or coral */
+    width: 100px;
+    height: 2px; /* Adjust the height as needed */
+    background-color: #333; /* Change the color if necessary */
+    margin: 0 auto; /* Center the line */
+}
+
+.horizontal-line-long {
+    color: rgb(238, 162, 108);  /*Shades of orange or coral */
+    width: 100%;
+    height: 1px; /* Adjust the height as needed */
+    background-color: #333; /* Change the color if necessary */
+    margin: 0 auto; /* Center the line */
+}
+
+#about{
+    background-color: aliceblue;
+}
+#about .container{
+    margin-top: -50px;
+    padding-top: 50px;
+}
+#about .container .row{
+    font-weight: 480;
+}
+
+#glb {
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-top: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+    border-bottom: solid 1px rgb(0, 0, 0);
+    border-top-right-radius: 20px;
+    
+  }
+  
+  #ext {
+    padding: 20px;
+    display: none;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+  }
+
+#tec {
+    padding: 5px;
+    background-color: rgb(156, 213, 236);
+    border-top: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+    border-bottom: solid 1px rgb(0, 0, 0);
+    border-top-right-radius: 20px;
+  }
+  
+  #mod {
+    padding: 20px;
+    display: none;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(156, 213, 236);
+    border-bottom: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+  }
+
+#rel {
+    padding: 5px;
+    background-color: rgb(156, 213, 236);
+    border-top: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+    border-bottom: solid 1px rgb(0, 0, 0);
+    border-top-right-radius: 20px;
+  }
+  
+  #con {
+    padding: 20px;
+    display: none;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(156, 213, 236);
+    border-bottom: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+  }
+
+#cus {
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-top: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+    border-bottom: solid 1px rgb(0, 0, 0);
+    border-top-right-radius: 20px;
+  }
+  
+  #per {
+    padding: 20px;
+    display: none;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 2px rgb(238, 162, 108);
+    border-left: solid 2px rgb(238, 162, 108);
+    border-right: solid 2px rgb(238, 162, 108);
+  }
+
+  .fa-angle-down{
+    float: right;
+    padding-right: 10px;
+    margin-top: 7px;
+  }
+
+#about  .container .row .col-md-5 img{
+    border-radius:100%;
+    height: 270px;
+    float: right;
+    margin-right: 100px;
+    
+}
+/* end of about us page styling */
+
+
+
+
+
+
+/* our services styling */
+#services{
+  padding-top: 50px;
+}
+#services .container .service{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+#services .container-fluid{
+  background-color: aliceblue;
+  
+}
+/* end of our service section*/
+
+
+
+
+
+/* contact us styling */
+#contact .container form .col-md-5 img{
+  /* height: 400px; */
+  border-radius: 50px;
+}
+
+#contact .container form .col-md-7 button{
+  background-color: rgb(238, 162, 108);  /*Shades of orange or coral */
+  color: black;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+}
+#contact .container form .col-md-7 button:hover{
+  box-shadow: 0px 2px 2px 1px rgb(156, 213, 236);
+  background-color: aliceblue;
+}
+/* end of contact us section*/
+
+
+
+
+/* track styling */
+#track{
+    background: linear-gradient(rgba(17, 28, 38, 0.543), rgb(0, 0, 0)), url(../img/plane/pexels-jeffry-surianto-17972353.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+#track .container{
+  padding-top: 100px;
+}
+#track .container h2{
+  color: aliceblue;
+}
+#track .container p{
+  color: aliceblue;
+}
+#track .container label{
+  color: aliceblue;
+}
+#track .container .row .col-md-6 form button{
+  background-color: rgb(238, 162, 108);  /*Shades of orange or coral */
+  color: black;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+}
+#track .container .row .col-md-6 form button:hover{
+  box-shadow: 0px 2px 2px 1px rgb(156, 213, 236);
+  background-color: aliceblue;
+}
+
+
+
+/* to top  button */
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: rgb(238, 162, 108); 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px;
+  border-radius: 100%; 
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+  background-color: rgb(156, 213, 236); /* Add a dark-grey background on hover */
+}
+
+
+@media (max-width: 920px) {
+  #about  .container .row .col-md-5 img{
+    border-radius:100%;
+    height: 200px;
+    float: right;
+    margin-right: 100px;
+    
+  }
+
+  /* our services styling */
+  
+  #services .container .service{
+    padding-left: 0;
+    padding-right: 0;
+  }
+ 
+  /* end of our service section*/
+
+
+  /* contact us styling */
+  #contact .container form .col-md-5 img{
+    /* margin-top: 30px; */
+    border-radius: 20px;
+    width: 80%;
+    margin: 20px 32px;
+  }
+  
+  /* end of our service section*/
+}
