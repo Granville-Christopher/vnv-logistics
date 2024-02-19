@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VnV logistics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <link rel="stylesheet" href="font/css/all.css">
+    <link rel="stylesheet" href="icofont/icofont.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/newship.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class="fab fa-vnv"></i> Admin</a>
+            <span class="navbar-toggle"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars navbar-toggler"></i>
+            </span>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5">
+                        <a class="nav-link d-flex align-items-center" href="index.html">
+                            <i class="fa fa-home me-2"></i>
+                            <span class="nav-link-text">Home</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+
+    <section>
+        <div class="container text-center mt-5">
+            <h3>Tracking Information</h3>
+            <div class="underline"></div>
+        
+        
+                <!-- Display package details in a table -->
+                <table class="table table-bordered mt-3 mb-3">
+                    <thead>
+                        <tr>
+                            <th>Tracking Number</th>
+                            <th>Sender</th>
+                            <th>Receiver</th>
+                            <th>Status</th>
+                            <th>Progress</th>
+                            <th>Delivery Address</th>
+                            <th>Departure</th>
+                            <th>Delivery date</th>
+                            <th>Current Location</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trackingDetailsBody"></tbody>
+                </table>
+            </div>
+            <div id="map" style="height: 400px;"></div>
+
+               
+          
+        
+            <!-- Add any necessary JavaScript scripts or links here -->
+            
+
+
+        </div>
+    </section>
+    <!-- Footer -->
+    <div class="footer text-light fixed-bottom">
+        <p>&copy; 2024 <i class="fab fa-vnv"></i> International Logistics</p>
+    </div>
+</body>
+<script src="js/tracking.js"></script>
+<!-- Add Leaflet CSS and JS -->
+
+
+
+
+<!-- Add this before the closing body tag -->
+
+
+
+<script src="js/countries.js"></script>
+</html>

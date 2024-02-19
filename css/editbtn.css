@@ -1,0 +1,25 @@
+.edit_button{
+    background-color: rgb(161, 161, 4);
+    border-radius: 20px;
+    margin: 5px;
+}
+.delete_button{
+    background-color: rgb(138, 3, 3);
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.edit_button:hover{
+    background-color: yellow;
+
+}
+
+.delete_button:hover{
+    background-color: red;
+    color: aliceblue;
+}
+
+.tresponsive{
+    width: 100%;
+    overflow-x: auto;
+}

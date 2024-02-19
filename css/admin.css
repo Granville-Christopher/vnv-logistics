@@ -1,0 +1,52 @@
+body{
+    background-color: aliceblue;
+    font-size: 18px;
+    
+}
+section .container{
+    margin-top: 20px;
+}
+section .container .row .card{
+    background: linear-gradient(rgba(0, 0, 0, 0.751), rgba(40, 40, 40, 0)), skyblue;
+    height: 50vh;
+}
+section .container .row .card img{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 2px aliceblue;
+}
+
+section .container .row .card p{
+    margin-top: 10%;
+}
+.underline{
+    height: 2px;
+    width: 200px;
+    background-color: black;
+    margin: auto;
+}
+section .container .row .col-md-2{
+    height: 50vh;
+    width: 0%;
+    border-radius: 20px;
+    background-color: black;
+    margin: auto;
+}
+
+@media (max-width: 920px) {
+    section .container .row .col-md-2{
+        height: 2px;
+        width: 200px;
+        border-radius: 20px;
+    }
+
+    section .container .row .card{
+      
+        background: linear-gradient(rgba(0, 0, 0, 0.751), rgba(40, 40, 40, 0)), skyblue;
+        height: 200px;
+        width: 70%;
+        margin: auto;
+    }
+}

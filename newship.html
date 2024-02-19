@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VnV logistics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.0.0/dist/css/ionicons.min.css" integrity="sha384-CNRILKu3QO/ZpWRjGoU82uNleLVrrLIn1pWO8e7xW6b5pFa2ZD9/EK0OmY9FfJzF" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="font/css/all.css">
+    <!-- <link rel="stylesheet" href="icofont/icofont.css"> -->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/newship.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="admin.html"><i class="fab fa-vnv"></i> Admin</a>
+            <span class="navbar-toggle"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars navbar-toggler"></i>
+            </span>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5">
+                        <a class="nav-link d-flex align-items-center" href="admin.html">
+                            <i class="fa fa-home me-2"></i>
+                            <span class="nav-link-text">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item me-5">
+                        <a class="nav-link d-flex align-items-center" href="mail">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span class="nav-link-text">mail</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+
+    <section>
+        <div class="container text-center mt-5">
+            <h3>New Shipment</h3>
+            <!-- <div class="underline"></div> -->
+
+            <div class="card mb-5 ">
+                
+                <form action="http://127.0.0.1:3000/submit-form" class="ship" method="POST">
+
+                    <h4>Sender Information</h4>
+                
+                    <label for="SF-name">Full Name</label>
+                    <input type="text" id="SF-name" placeholder="Enter full name">
+                
+                    <label for="Semail">Sender Email</label>
+                    <input type="email" id="Semail" placeholder="Enter sender email">
+                
+                    <label for="Slocation">Sender Location</label>
+                    <input type="text" id="Slocation" placeholder="Enter sender location">
+                
+                    <h4>Receiver Information</h4>
+                
+                    <label for="RF-name">Full Name</label>
+                    <input type="text" id="RF-name" placeholder="Enter full name">
+                
+                    <label for="Remail">Receiver Email</label>
+                    <input type="email" id="Remail" placeholder="Enter receiver email">
+                
+                    <label for="Rlocation">Receiver Location</label>
+                    <input type="text" id="Rlocation" placeholder="Enter receiver location">
+
+                    <label for="Departure">Departure date</label>
+                    <input type="date" id="Departure" placeholder="Enter Departure date">
+
+                    <label for="Delivery">Delivery date</label>
+                    <input type="date" id="Delivery" placeholder="Enter Delivery date">
+
+                    <label for="Status">Status</label>
+                    <input type="text" id="Status" placeholder="Enter Status of package">
+
+                    <label for="Progress">Progress</label>
+                    <select name="Progress" id="Progress" placeholder="Enter progress">
+                        <option value="Ordered">Ordered</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
+                
+                    <h4>Parcel Information</h4>
+                
+                    <label for="details">Parcel Details</label>
+                    <textarea id="details" cols="30" rows="4" placeholder="Enter parcel details"></textarea>
+                
+                    <label for="countries">Select Take-off Country</label>
+                    <select id="countries" name="countries"></select>
+                
+                    <label for="Ccountry">Select Current Country</label>
+                    <select id="Ccountry" name="Ccountry"></select>
+                
+                    <button type="submit">Register</button>
+                
+                  </form>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- Footer -->
+    <div class="footer text-light fixed-bottom">
+        <p>&copy; 2024 <i class="fab fa-vnv"></i> International Logistics</p>
+    </div>
+</body>
+<script src="js/countries.js"></script>
+<script src="js/validation.js"></script>
+<!-- <script>
+ 
+    // Check if the user is authenticated
+    const userId = sessionStorage.getItem('userId');
+    if (!userId) {
+        // If not authenticated, redirect to the login page
+        window.location.href = '/adminlogin.html';
+    }
+
+</script> -->
+<!-- <script src="js//"></script> -->
+</html>

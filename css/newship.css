@@ -1,0 +1,49 @@
+.card{
+    box-shadow: 0 0 10px rgb(17, 28, 38);
+}
+
+.ship {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.267);
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+  }
+
+  h4 {
+    color: #333;
+  }
+
+  label {
+    display: block;
+    /* margin-top: 2%; */
+  }
+
+  input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: aliceblue;
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.402);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: skyblue;
+  }

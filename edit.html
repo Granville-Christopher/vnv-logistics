@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VnV logistics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.0.0/dist/css/ionicons.min.css" integrity="sha384-CNRILKu3QO/ZpWRjGoU82uNleLVrrLIn1pWO8e7xW6b5pFa2ZD9/EK0OmY9FfJzF" crossorigin="anonymous">
+    <link rel="stylesheet" href="font/css/all.css">
+    <link rel="stylesheet" href="icofont/icofont.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/newship.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="admin.html"><i class="fab fa-vnv"></i> Admin</a>
+            <span class="navbar-toggle"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars navbar-toggler"></i>
+            </span>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-5">
+                        <a class="nav-link d-flex align-items-center" href="admin.html">
+                            <i class="fa fa-home me-2"></i>
+                            <span class="nav-link-text">Home</span>
+                        </a>
+                    </li>
+                    
+                
+                    <li class="nav-item me-5">
+                        <a class="nav-link d-flex align-items-center" href="mail">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span class="nav-link-text">mail</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+
+    <section>
+        <div class="container text-center mt-5">
+            <h3>Edit Package</h3>
+            <div class="underline mb-4"></div>
+            
+            <div class="card mb-5">
+                <div  class="ship">
+
+                    <h4>Edit Sender Information</h4>
+                
+                    <label for="editSF-name">Full Name</label>
+                    <input type="text" id="editSF-name" placeholder="Enter full name">
+                
+                    <label for="editSemail">Sender Email</label>
+                    <input type="email" id="editSemail" placeholder="Enter sender email">
+                
+                    <label for="editSlocation">Sender Location</label>
+                    <input type="text" id="editSlocation" placeholder="Enter sender location">
+                
+                    <h4>Edit Receiver Information</h4>
+                
+                    <label for="editRF-name">Full Name</label>
+                    <input type="text" id="editRF-name" placeholder="Enter full name">
+                
+                    <label for="editRemail">Receiver Email</label>
+                    <input type="email" id="editRemail" placeholder="Enter receiver email">
+                
+                    <label for="editRlocation">Receiver Location</label>
+                    <input type="text" id="editRlocation" placeholder="Enter receiver location">
+            
+                    <label for="editDeparture">Departure date</label>
+                    <input type="date" id="editDeparture" placeholder="Enter Departure date">
+
+                    <label for="editDelivery">Delivery date</label>
+                    <input type="date" id="editDelivery" placeholder="Enter Delivery date">
+            
+                    <label for="editStatus">Status</label>
+                    <input type="text" id="editStatus" placeholder="Enter Status of package">
+                
+                    <h4>Edit Parcel Information</h4>
+                
+                    <label for="editDetails">Parcel Details</label>
+                    <textarea id="editDetails" cols="30" rows="4" placeholder="Enter parcel details"></textarea>
+                
+                    <label for="editCountries">Select Take-off Country</label>
+                    <select id="editCountries" name="editCountries"></select>
+                
+                    <label for="editCcountry">Select Current Country</label>
+                    <select id="editCcountry" name="editCcountry"></select>
+                
+                    <button type="submit" onclick="updatePackage( )">Update Package</button>
+                
+                </div>
+            </div>
+            
+        </div>
+    
+    </section>
+    <!-- Footer -->
+    <div class="footer text-light">
+        <p>&copy; 2024 <i class="fab fa-vnv"></i> International Logistics</p>
+    </div>
+</body>
+<!-- <script src="js/frontend.js"></script> -->
+<script src="js/countries.js"></script>
+<script>
+    let contents = sessionStorage.getItem('ship')
+    contents = JSON.parse(contents)
+
+    document.getElementById('editSF-name').value = contents.senderName
+    document.getElementById('editSemail').value = contents.senderEmail
+    document.getElementById('editSlocation').value = contents.senderLocation
+    document.getElementById('editRemail').value = contents.receiverEmail
+    document.getElementById('editRF-name').value = contents.receiverName
+    document.getElementById('editRlocation').value = contents.receiverLocation
+    document.getElementById('editDeparture').value = contents.Departure
+    document.getElementById('editDelivery').value = contents.Delivery
+    document.getElementById('editStatus').value = contents.Status
+    document.getElementById('editProgress').value = contents.Progress
+    document.getElementById('editDetails').value = contents.parcelDetails
+    document.getElementById('editCountries').value = contents.Countries
+    document.getElementById('editCcountry').value = contents.Status
+
+
+
+
+// Function to submit the edit form
+async function updatePackage() {
+    try {
+        // const packageId =` http://127.0.0.1:3000/admin/packages/${packageId}`;
+        const formData = {
+            packageId: contents.id,
+            senderName: document.getElementById('editSF-name').value,
+            senderEmail: document.getElementById('editSemail').value,
+            senderLocation: document.getElementById('editSlocation').value,
+            receiverName: document.getElementById('editRF-name').value,
+            receiverEmail: document.getElementById('editRemail').value,
+            receiverLocation: document.getElementById('editRlocation').value,
+            Departure: document.getElementById('editDeparture').value,
+            Delivery: document.getElementById('editDelivery').value,
+            Status: document.getElementById('editStatus').value,
+            Progress: document.getElementById('editProgress').value,
+            parcelDetails: document.getElementById('editDetails').value,
+            takeOffCountry: document.getElementById('editCountries').value,
+            currentCountry: document.getElementById('editCcountry').value,
+            // Add other form fields as needed
+        };
+
+        // Send the form data to the server for updating the package
+        const response = await fetch(`http://127.0.0.1:3000/admin/packages/edit`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            alert('Package updated successfully');
+            window.location.href = 'dashboard.html'
+        } else {
+            console.error('Failed to update package:', response.statusText);
+        }
+
+        // Returning false prevents the default form submission behavior
+        return false;
+    } catch (error) {
+        console.error('Error during form submission:', error);
+        return false;
+    }
+}
+
+</script>
+<!-- <script>
+ 
+    // Check if the user is authenticated
+    const userId = sessionStorage.getItem('userId');
+    if (!userId) {
+        // If not authenticated, redirect to the login page
+        window.location.href = '/adminlogin.html';
+    }
+   
+   </script> -->
+ </html>
